@@ -1,0 +1,87 @@
+{
+  "browser": "154.0.8037.57",
+  "externalRequests": [],
+  "errors": [],
+  "results": [
+    {
+      "game": "maze",
+      "mode": "solo",
+      "keyboard": true,
+      "highDPI": true,
+      "countdown": true,
+      "pause": true
+    },
+    {
+      "game": "maze",
+      "mode": "duo",
+      "keyboard": true,
+      "highDPI": true,
+      "countdown": true,
+      "pause": true
+    },
+    {
+      "game": "snake",
+      "mode": "solo",
+      "keyboard": true,
+      "highDPI": true,
+      "countdown": true,
+      "pause": true
+    },
+    {
+      "game": "snake",
+      "mode": "duo",
+      "keyboard": true,
+      "highDPI": true,
+      "countdown": true,
+      "pause": true
+    },
+    {
+      "game": "runner",
+      "mode": "solo",
+      "keyboard": true,
+      "highDPI": true,
+      "countdown": true,
+      "pause": true
+    },
+    {
+      "game": "runner",
+      "mode": "duo",
+      "keyboard": true,
+      "highDPI": true,
+      "countdown": true,
+      "pause": true
+    },
+    {
+      "game": "road",
+      "mode": "solo",
+      "keyboard": true,
+      "highDPI": true,
+      "countdown": true,
+      "pause": true
+    },
+    {
+      "game": "road",
+      "mode": "duo",
+      "keyboard": true,
+      "highDPI": true,
+      "countdown": true,
+      "pause": true
+    },
+    {
+      "game": "breakout",
+      "mode": "solo",
+      "keyboard": true,
+      "highDPI": true,
+      "countdown": true,
+      "pause": true
+    },
+    {
+      "game": "breakout",
+      "mode": "duo",
+      "keyboard": true,
+      "highDPI": true,
+      "countdown": true,
+      "pause": true
+    }
+  ]
+}

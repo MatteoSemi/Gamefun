@@ -1,0 +1,75 @@
+{
+  "method": "Real Chromium keyboard events drive deterministic 60 Hz session ticks; no world state mutations or teleports. State read only for route planning.",
+  "games": {
+    "maze": {
+      "moves": 16,
+      "score": 200,
+      "lives": 3,
+      "powerSeconds": 8,
+      "player": {
+        "x": 17,
+        "y": 19
+      },
+      "ghostPositions": [
+        {
+          "x": 17,
+          "y": 3
+        },
+        {
+          "x": 3,
+          "y": 9
+        },
+        {
+          "x": 17,
+          "y": 8
+        }
+      ]
+    },
+    "snake": {
+      "score": 20,
+      "length": 5,
+      "over": false,
+      "food": {
+        "x": 2,
+        "y": 7
+      }
+    },
+    "runner": {
+      "score": 248,
+      "distance": 2483.038888424227,
+      "over": false,
+      "jumps": 2,
+      "groundPassFrames": 38,
+      "birdPassFrames": 21,
+      "ducked": true
+    },
+    "road": {
+      "row": 12,
+      "score": 110,
+      "over": false,
+      "reason": "",
+      "hops": 11,
+      "waitFrames": 45,
+      "riverSeen": true,
+      "logCarryPixels": 33.333333333332575,
+      "camera": 7
+    },
+    "breakout": {
+      "score": 150,
+      "lives": 3,
+      "over": false,
+      "level": 1,
+      "remaining": 30,
+      "frames": 1573,
+      "paddleBounces": 13,
+      "launches": 2,
+      "afterIntentionalMiss": {
+        "lives": 2,
+        "attached": true,
+        "score": 150
+      },
+      "relaunched": true
+    }
+  },
+  "errors": []
+}
