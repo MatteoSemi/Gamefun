@@ -7,9 +7,10 @@ import { preview } from './previews';
 import { createSnake } from './games/snake';
 import { createRunner } from './games/runner';
 import { createRoad } from './games/road';
+import { createBreakout } from './games/breakout';
 import { createMaze } from './games/maze';
 import type { GameFactory, GameId } from './types';
-const factories:Partial<Record<GameId,GameFactory>>={road:createRoad,runner:createRunner,maze:createMaze,snake:createSnake};
+const factories:Partial<Record<GameId,GameFactory>>={breakout:createBreakout,road:createRoad,runner:createRunner,maze:createMaze,snake:createSnake};
 const icons={book:'<path d="M12 5v15M12 5C8 2 4 3 2 4v14c4-1 7 0 10 2 3-2 6-3 10-2V4c-3-1-7-2-10 1Z"/>',home:'<path d="m2 11 10-9 10 9M5 9v12h5v-7h4v7h5V9"/>',duo:'<path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM2 21v-3a7 7 0 0 1 14 0v3M16 4a4 4 0 0 1 0 8m2 3a6 6 0 0 1 4 6"/>'};
 const svg=(name:keyof typeof icons)=>`<svg viewBox="0 0 24 24" aria-hidden="true">${icons[name]}</svg>`;
 const iconButton=(name:keyof typeof icons,id:string,label:string)=>`<button class="icon-button" id="${id}" aria-label="${label}" title="${label}">${svg(name)}</button>`;
@@ -60,7 +61,7 @@ function paint(){
 }
 let previous=performance.now(),accumulator=0;
 function frame(now:number){const delta=Math.min(.1,(now-previous)/1000);previous=now;accumulator+=delta;let steps=0;while(accumulator>=1/60&&steps++<6){session?.tick(1/60);accumulator-=1/60;}paint();requestAnimationFrame(frame);}
-window.addEventListener('keydown',e=>{if(e.code==='Escape'&&!openDialog&&session){e.preventDefault();togglePause();}});
+window.addEventListener('keydown',e=>{if(e.code==='Escape'&&!e.repeat&&!openDialog&&session){e.preventDefault();togglePause();}});
 window.addEventListener('blur',()=>{session?.pause();paint();});document.addEventListener('visibilitychange',()=>{if(document.hidden){session?.pause();paint();}});window.addEventListener('pagehide',()=>session?.save());
 home();requestAnimationFrame(frame);
 // Development-only deterministic controls; excluded from the production build.
