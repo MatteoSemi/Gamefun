@@ -1,5 +1,5 @@
 # Phosphor Arcade progress
-Milestone 3: Runner complete and integrated.
-Working: shared shell, Maze + Snake + Runner, including simultaneous independent worlds.
+Milestone 3: Road complete and integrated.
+Working: shared shell, Maze + Snake + Runner + Road, including simultaneous independent worlds.
 Validation: production build and meaningful logic tests pass.
-Next: integrate remaining prepared solo games.
+Next: real browser checks for first four, then Breakout.
