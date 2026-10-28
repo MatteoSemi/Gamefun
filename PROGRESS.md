@@ -39,3 +39,6 @@ src/games/* — five worlds; src/session.ts, input.ts, storage.ts — shared ser
 tests/* and evidence/* — reproducible tests, logs and screenshots.
 
 No implementation step remains. To play: from this directory run `npm ci` then `npm run dev`, and open the printed localhost address. To resume development, inspect Git status, read these notes, then run the relevant tests before editing. Use this existing isolated checkout; do not create a worktree unless requested.
+
+## Online publishing follow-up
+User authorized online publication. Read-only Git operation and push dry-run succeeded; GitHub API request to repos/MatteoSemi/Gamefun failed Forbidden. Prepared relative-base Vite production build for gh-pages. See PUBLISHING.md for the remaining one-time Pages setting; do not claim the expected URL is live until verified.
