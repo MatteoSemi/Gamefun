@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { RunnerGame,runnerGap,overlaps,RUNNER_GROUND,RUNNER_MAX_SPEED } from '../src/games/runner';
+import type {Action,Controls} from '../src/types';
+const input=(held:Action[]=[],pressed:Action[]=[]):Controls=>({held:new Set(held),pressed:new Set(pressed)});
+test('jump rises, lands, and held jump does not retrigger',()=>{const g=new RunnerGame(1);g.update(1/60,input(['up'],['up']));assert.ok(g.y<RUNNER_GROUND);for(let i=0;i<60;i++)g.update(1/60,input(['up']));assert.equal(g.y,RUNNER_GROUND);assert.equal(g.velocity,0);});
+test('grounded duck clears flying obstacle that hits standing runner',()=>{const a=new RunnerGame(1),b=new RunnerGame(1);const bird={kind:'bird' as const,x:78,y:307,w:35,h:22};a.obstacles=[{...bird}];b.obstacles=[{...bird}];a.update(.001,input());b.update(.001,input(['down']));assert.equal(a.over,true);assert.equal(b.over,false);});
+test('ducking is grounded only',()=>{const g=new RunnerGame(1);g.update(1/60,input([],['up']));g.update(1/60,input(['down']));assert.equal(g.ducking,false);});
+test('spacing permits at least 1.65 seconds at supported maximum speed',()=>{for(const speed of [210,250,300,390])assert.ok(runnerGap(speed,0)/speed>=1.65);const g=new RunnerGame(2);g.distance=1e8;g.update(.001,input());assert.equal(g.speed,RUNNER_MAX_SPEED);});
+test('seeded obstacles match and collisions end a run',()=>{const a=new RunnerGame(42),b=new RunnerGame(42);for(let i=0;i<135;i++){a.update(1/60,input());b.update(1/60,input());}assert.deepEqual(a.obstacles,b.obstacles);assert.ok(a.obstacles.length>0);a.obstacles=[{kind:'tower',x:76,y:305,w:25,h:51}];a.update(.001,input());assert.equal(a.over,true);assert.equal(b.over,false);});
+test('AABB contact and separation produce coherent hitboxes',()=>{assert.equal(overlaps({x:0,y:0,w:2,h:2},{x:1,y:1,w:2,h:2}),true);assert.equal(overlaps({x:0,y:0,w:2,h:2},{x:2,y:0,w:2,h:2}),false);});
