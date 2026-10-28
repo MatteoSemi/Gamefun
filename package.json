@@ -9,7 +9,8 @@
     "preview": "vite preview --host 127.0.0.1",
     "test": "node --import tsx --test --test-isolation=none tests/*.test.ts",
     "test:browser": "playwright test",
-    "test:production": "npm run build && node tests/production.mjs"
+    "test:production": "npm run build && node tests/production.mjs",
+    "test:gameplay": "node tests/gameplay.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.58.0",

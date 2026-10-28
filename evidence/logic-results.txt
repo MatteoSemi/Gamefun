@@ -1,0 +1,58 @@
+
+> phosphor-arcade@1.0.0 test
+> node --import tsx --test --test-isolation=none tests/*.test.ts
+
+✔ breakout launch stays attached until edge and seeded launch is repeatable (2.301954ms)
+✔ swept brick collision prevents high speed tunneling and scores exactly once (0.278572ms)
+✔ exact corner collision reflects both axes, and parallel ray misses (0.192902ms)
+✔ paddle position controls rebound angle with upward component and no sticking (0.233854ms)
+✔ ball loss costs one life and requires relaunch; third loss ends run (0.781543ms)
+✔ last brick advances round, resets ball, retains lives and caps speed (0.201415ms)
+✔ wall corner at high speed stays in bounds and produces finite state (0.295857ms)
+✔ maze: every required pellet is reachable over a broad seed sample (8.551342ms)
+✔ maze: buffered turns wait for a legal intersection and wall collision holds position (2.015841ms)
+✔ maze: power pellets award 50 and frightened enemies award 200 without costing a life (0.369319ms)
+✔ maze: three collisions end the run and all-pellet clear advances the round (0.413956ms)
+✔ maze: identical seeds have independent, equivalent layouts and state (1.276122ms)
+✔ road starts with safe space and independent identical seeded lanes (0.503782ms)
+✔ forward rows score once and backwards hops cannot farm points (0.104227ms)
+✔ generator keeps safe banks, traversable gaps and capped speed (0.698226ms)
+✔ log support carries player with lane; leaving support drowns (0.248265ms)
+✔ traffic collision ends run, a gap remains safe (0.152551ms)
+✔ wrapped lane objects preserve support across periods (0.097587ms)
+✔ jump rises, lands, and held jump does not retrigger (0.336058ms)
+✔ grounded duck clears flying obstacle that hits standing runner (0.157688ms)
+✔ ducking is grounded only (0.070217ms)
+✔ spacing permits at least 1.65 seconds at supported maximum speed (0.091358ms)
+✔ seeded obstacles match and collisions end a run (0.347726ms)
+✔ AABB contact and separation produce coherent hitboxes (0.065499ms)
+✔ records survive reload, separate modes and never lower a score (0.347346ms)
+✔ corrupt and invalid storage entries are ignored, valid entries recovered (0.146371ms)
+✔ unavailable and full storage retain session records without throwing (0.180142ms)
+✔ saving merges higher records written by another tab (0.103647ms)
+✔ simultaneous WASD/arrows are isolated; Space launches neither duo player (0.540278ms)
+✔ rapid edges retain order and OS repeat does not generate another jump (0.159722ms)
+✔ pause, blur, teardown and inactive menus clear or ignore held input (0.141715ms)
+✔ interactive controls retain normal keys while an active playfield blocks scrolling (0.132171ms)
+✔ session shares countdown, seed and starting state without sharing world objects (0.378453ms)
+✔ session routes simultaneous controls to independent worlds (0.129666ms)
+✔ individual elimination freezes that world while survivor keeps playing (0.176597ms)
+✔ results distinguish winners and draws and rematch recreates both worlds (0.511454ms)
+✔ pause clears held inputs, freezes both worlds, and requires explicit resume (0.155596ms)
+✔ countdown pause preserves remaining time and resume restarts only the countdown (0.082986ms)
+✔ records save promptly and stay monotonic through reset, home and mode separation (0.122756ms)
+✔ solo outcome reports full-board victory and normal run completion separately (0.078329ms)
+✔ snake rejects reverse but queues rapid distinct turns in order (0.282327ms)
+✔ snake can enter cell vacated by tail without eating (0.167653ms)
+✔ food excludes occupied cells and full board has no food (0.081724ms)
+✔ filling final cell wins cleanly and score grows (0.286954ms)
+✔ wall and self collision end run; speed has cap (0.183628ms)
+✔ seeded snake worlds have independent deterministic food (0.141074ms)
+ℹ tests 46
+ℹ suites 0
+ℹ pass 46
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 198.281089

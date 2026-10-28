@@ -1,6 +1,6 @@
 # Validation report
 
-Tested 29 October 2026 (Europe/Berlin), Linux x64, Node 24.19.0, npm 11.9.0. Actual browser: **Chromium 154.0.8037.57**, headless, through Playwright 1.61.1. No human play session is claimed: gameplay checks used real browser keyboard events, automated observation, deterministic stepping, and separate real-time production tests.
+Tested 29 October 2026 (Europe/Berlin), Linux x64, Node 24.19.0, npm 11.9.0. Actual browser: **Chromium 154.0.8037.57**, headless, through Playwright 1.64.1. No human play session is claimed: gameplay checks used real browser keyboard events, automated observation, deterministic stepping, and separate real-time production tests.
 
 ## Results
 
@@ -16,7 +16,7 @@ Tested 29 October 2026 (Europe/Berlin), Linux x64, Node 24.19.0, npm 11.9.0. Act
 
 The repeatable gameplay script fixes a starting seed (424242) before application initialization, disables requestAnimationFrame in that test page, and drives **actual keyboard events** with 60 Hz coordinator steps. It reads state for route planning; it does not teleport the player, remove hazards, change scores, or mutate worlds. This complements the normal animation-loop browser tests and real-time static-build tests.
 
-- **Maze:** keyboard path across 16 cells collected 200 points, including a real power pellet activating 8 seconds of frightened state; all three lives remained. Unit tests flood-fill every required pellet across 80 seeded mazes, and check buffered turns, walls, frightened enemy scoring, three losses, safe respawn, round progression and independent equal seeds.
+- **Maze:** keyboard path across 16 cells collected 200 points, including a real power pellet activating 8 seconds of frightened state; all three lives remained. Unit tests flood-fill every required pellet across 40 seeded mazes, and check buffered turns, walls, frightened enemy scoring, three losses, safe respawn, round progression and independent equal seeds.
 - **Snake:** ate two foods, reached 20 points and five cells through directional key presses. Unit tests cover rapid turn ordering, reversal rejection, legal entry into a vacated tail cell, food exclusion, full-board victory, self/wall collisions, speed cap and independent RNG.
 - **Runner:** replay survived through 979 points, jumped generated ground hazards 15 times and ducked a generated flyer. Unit tests verify jump/landing, repeat suppression, duck hitboxes, grounded-only ducking, deterministic hazards, AABB collision and speed-aware spacing at the supported cap.
 - **Road:** keyboard hops reached row 12, 110 points; waited for moving traffic, crossed river logs, rode 20 pixels with log motion and scrolled camera to row 7. Unit tests verify safe start/banks, vehicle gaps/log widths over generated rows, wrapped support, drowning, car collision, log carry, independent seeded lanes, score anti-farming and speed cap. This checks generation invariants and representative crossings, not an exhaustive proof of every infinite route.
@@ -46,3 +46,7 @@ Focus-loss events pause both worlds, clear held keys and require deliberate resu
 - Windows/macOS launch commands are documented and use portable Node/npm tooling, but only Linux was actually executed. Physical keyboard rollover and monitor refresh rates were not measured on hardware.
 - No human playtesting, screen-reader audit, physical touchscreen tests or multi-hour browser soak is claimed. Touch controls and optional sound are not implemented.
 - No known blocking defects remain in the tested flows. The normal run is endless in Maze/Runner/Road/Breakout; Snake has a full-board victory. Lives and round progression match the rulebook.
+
+## Final repeatability and cleanup
+
+The frozen dependency installation was repeated successfully with `npm ci --offline --no-audit --no-fund`, using the local npm cache and normal integrity verification. The documented localhost-only dev server was stopped and restarted successfully. After formatting the TypeScript source, all 46 logic checks, the strict production build, and the complete 17-test Chromium regression suite passed again. The production runner initially left its npm-spawned preview child alive after otherwise successful checks; it now spawns and terminates Vite directly, and the corrected runner completed with exit status 0. This was a test-runner cleanup issue, not an application loop leak.

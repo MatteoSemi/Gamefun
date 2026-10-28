@@ -129,12 +129,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 871,
+                  "duration": 906,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-28T23:31:18.812Z",
+                  "startTime": "2026-10-28T23:36:50.554Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -144,8 +144,8 @@
           ],
           "id": "41922fa1b760a3f76b44-1f87384ff46773681f34",
           "file": "arcade.spec.ts",
-          "line": 15,
-          "column": 2
+          "line": 24,
+          "column": 5
         },
         {
           "title": "maze: split screen simultaneous keys remain isolated, elimination and rematch",
@@ -163,12 +163,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 916,
+                  "duration": 1201,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-28T23:31:19.900Z",
+                  "startTime": "2026-10-28T23:36:51.672Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -178,8 +178,8 @@
           ],
           "id": "41922fa1b760a3f76b44-f133c574c1ed95285156",
           "file": "arcade.spec.ts",
-          "line": 33,
-          "column": 2
+          "line": 60,
+          "column": 5
         },
         {
           "title": "snake: solo preview launches, assigned keyboard changes live world, restart and Home",
@@ -197,12 +197,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 729,
+                  "duration": 919,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-28T23:31:20.830Z",
+                  "startTime": "2026-10-28T23:36:52.895Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -212,8 +212,8 @@
           ],
           "id": "41922fa1b760a3f76b44-3dcec008d8d867956fc7",
           "file": "arcade.spec.ts",
-          "line": 15,
-          "column": 2
+          "line": 24,
+          "column": 5
         },
         {
           "title": "snake: split screen simultaneous keys remain isolated, elimination and rematch",
@@ -231,12 +231,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 918,
+                  "duration": 1033,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-28T23:31:21.575Z",
+                  "startTime": "2026-10-28T23:36:53.835Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -246,8 +246,8 @@
           ],
           "id": "41922fa1b760a3f76b44-59baab99468264e3198d",
           "file": "arcade.spec.ts",
-          "line": 33,
-          "column": 2
+          "line": 60,
+          "column": 5
         },
         {
           "title": "runner: solo preview launches, assigned keyboard changes live world, restart and Home",
@@ -265,12 +265,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 758,
+                  "duration": 745,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-28T23:31:22.512Z",
+                  "startTime": "2026-10-28T23:36:54.885Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -280,8 +280,8 @@
           ],
           "id": "41922fa1b760a3f76b44-9c26245be8d15ad06f1d",
           "file": "arcade.spec.ts",
-          "line": 15,
-          "column": 2
+          "line": 24,
+          "column": 5
         },
         {
           "title": "runner: split screen simultaneous keys remain isolated, elimination and rematch",
@@ -299,12 +299,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 963,
+                  "duration": 974,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-28T23:31:23.282Z",
+                  "startTime": "2026-10-28T23:36:55.644Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -314,8 +314,8 @@
           ],
           "id": "41922fa1b760a3f76b44-9b23e94f944c4648d553",
           "file": "arcade.spec.ts",
-          "line": 33,
-          "column": 2
+          "line": 60,
+          "column": 5
         },
         {
           "title": "road: solo preview launches, assigned keyboard changes live world, restart and Home",
@@ -333,12 +333,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 732,
+                  "duration": 782,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-28T23:31:24.263Z",
+                  "startTime": "2026-10-28T23:36:56.629Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -348,8 +348,8 @@
           ],
           "id": "41922fa1b760a3f76b44-9bb7fe3a9a31b25c09f7",
           "file": "arcade.spec.ts",
-          "line": 15,
-          "column": 2
+          "line": 24,
+          "column": 5
         },
         {
           "title": "road: split screen simultaneous keys remain isolated, elimination and rematch",
@@ -367,12 +367,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 939,
+                  "duration": 1041,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-28T23:31:25.012Z",
+                  "startTime": "2026-10-28T23:36:57.424Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -382,8 +382,8 @@
           ],
           "id": "41922fa1b760a3f76b44-8a90312b30cdb622c3a1",
           "file": "arcade.spec.ts",
-          "line": 33,
-          "column": 2
+          "line": 60,
+          "column": 5
         },
         {
           "title": "breakout: solo preview launches, assigned keyboard changes live world, restart and Home",
@@ -401,12 +401,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 696,
+                  "duration": 714,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-28T23:31:25.966Z",
+                  "startTime": "2026-10-28T23:36:58.477Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -416,8 +416,8 @@
           ],
           "id": "41922fa1b760a3f76b44-268d2051752d3b8a33e5",
           "file": "arcade.spec.ts",
-          "line": 15,
-          "column": 2
+          "line": 24,
+          "column": 5
         },
         {
           "title": "breakout: split screen simultaneous keys remain isolated, elimination and rematch",
@@ -435,12 +435,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 920,
+                  "duration": 902,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-28T23:31:26.678Z",
+                  "startTime": "2026-10-28T23:36:59.206Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -450,8 +450,8 @@
           ],
           "id": "41922fa1b760a3f76b44-f22c33f9cbb71f0028af",
           "file": "arcade.spec.ts",
-          "line": 33,
-          "column": 2
+          "line": 60,
+          "column": 5
         },
         {
           "title": "dialogs pause, mode changes require explicit Start, focus loss and Escape deliberate resume",
@@ -469,12 +469,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1144,
+                  "duration": 1292,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-28T23:31:27.610Z",
+                  "startTime": "2026-10-28T23:37:00.117Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -484,7 +484,7 @@
           ],
           "id": "41922fa1b760a3f76b44-b4093ce5b4ebac415ba0",
           "file": "arcade.spec.ts",
-          "line": 54,
+          "line": 99,
           "column": 1
         },
         {
@@ -503,12 +503,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1309,
+                  "duration": 1394,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-28T23:31:28.765Z",
+                  "startTime": "2026-10-28T23:37:01.428Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -518,7 +518,7 @@
           ],
           "id": "41922fa1b760a3f76b44-80d194faa68b294ea4a3",
           "file": "arcade.spec.ts",
-          "line": 65,
+          "line": 132,
           "column": 1
         },
         {
@@ -537,12 +537,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 777,
+                  "duration": 726,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-28T23:31:30.094Z",
+                  "startTime": "2026-10-28T23:37:02.844Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -552,7 +552,7 @@
           ],
           "id": "41922fa1b760a3f76b44-b16f715d7bee6a87a2ae",
           "file": "arcade.spec.ts",
-          "line": 72,
+          "line": 153,
           "column": 1
         },
         {
@@ -571,12 +571,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2910,
+                  "duration": 3051,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-28T23:31:30.888Z",
+                  "startTime": "2026-10-28T23:37:03.591Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -586,7 +586,7 @@
           ],
           "id": "41922fa1b760a3f76b44-c649bb121ec7646497e6",
           "file": "arcade.spec.ts",
-          "line": 76,
+          "line": 163,
           "column": 1
         },
         {
@@ -605,12 +605,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3198,
+                  "duration": 3189,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-28T23:31:33.810Z",
+                  "startTime": "2026-10-28T23:37:06.653Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -620,7 +620,7 @@
           ],
           "id": "41922fa1b760a3f76b44-b81c6b3c5162ebf76da7",
           "file": "arcade.spec.ts",
-          "line": 84,
+          "line": 191,
           "column": 1
         },
         {
@@ -639,12 +639,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1513,
+                  "duration": 1522,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-28T23:31:37.021Z",
+                  "startTime": "2026-10-28T23:37:09.858Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -654,7 +654,7 @@
           ],
           "id": "41922fa1b760a3f76b44-38211a0ae02ac2074f85",
           "file": "arcade.spec.ts",
-          "line": 91,
+          "line": 210,
           "column": 1
         },
         {
@@ -673,12 +673,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1502,
+                  "duration": 1523,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-28T23:31:38.544Z",
+                  "startTime": "2026-10-28T23:37:11.417Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -688,7 +688,7 @@
           ],
           "id": "41922fa1b760a3f76b44-db521346bfb7e80ab42a",
           "file": "arcade.spec.ts",
-          "line": 97,
+          "line": 228,
           "column": 1
         }
       ]
@@ -696,8 +696,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-28T23:31:18.363Z",
-    "duration": 21794.831,
+    "startTime": "2026-10-28T23:36:49.977Z",
+    "duration": 23059.387000000002,
     "expected": 17,
     "skipped": 0,
     "unexpected": 0,

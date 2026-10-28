@@ -1,10 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { SnakeGame,emptyFood } from '../src/games/snake';
-const blank={held:new Set<never>(),pressed:new Set<never>()};
-test('snake rejects reverse but queues rapid distinct turns in order',()=>{const g=new SnakeGame(1);g.enqueue('left');assert.deepEqual(g.turns,[]);g.enqueue('up');g.enqueue('left');g.step();assert.equal(g.direction,'up');g.step();assert.equal(g.direction,'left');});
-test('snake can enter cell vacated by tail without eating',()=>{const g=new SnakeGame(1);g.snake=[{x:1,y:1},{x:1,y:2},{x:2,y:2},{x:2,y:1}];g.direction='right';g.food={x:9,y:9};g.step();assert.equal(g.over,false);assert.deepEqual(g.snake[0],{x:2,y:1});});
-test('food excludes occupied cells and full board has no food',()=>{assert.deepEqual(emptyFood([{x:0,y:0},{x:1,y:0},{x:0,y:1}],2,()=>.99),{x:1,y:1});assert.equal(emptyFood([{x:0,y:0}],1,()=>0),null);});
-test('filling final cell wins cleanly and score grows',()=>{const g=new SnakeGame(1);const cells=[];for(let y=0;y<20;y++)for(let x=0;x<20;x++)if(x!==1||y!==0)cells.push({x,y});g.snake=cells;g.direction='right';g.food={x:1,y:0};g.step();assert.equal(g.won,true);assert.equal(g.over,true);assert.equal(g.snake.length,400);assert.equal(g.score,10);});
-test('wall and self collision end run; speed has cap',()=>{const g=new SnakeGame(1);g.snake=[{x:19,y:4}];g.step();assert.equal(g.over,true);g.score=1e7;assert.equal(g.interval,.07);g.update(10,blank);});
-test('seeded snake worlds have independent deterministic food',()=>{const a=new SnakeGame(44),b=new SnakeGame(44);assert.deepEqual(a.food,b.food);a.snake[0]!.x=0;assert.equal(b.snake[0]!.x,9);});
+import { SnakeGame, emptyFood } from '../src/games/snake';
+const blank = { held: new Set<never>(), pressed: new Set<never>() };
+test('snake rejects reverse but queues rapid distinct turns in order', () => { const g = new SnakeGame(1); g.enqueue('left'); assert.deepEqual(g.turns, []); g.enqueue('up'); g.enqueue('left'); g.step(); assert.equal(g.direction, 'up'); g.step(); assert.equal(g.direction, 'left'); });
+test('snake can enter cell vacated by tail without eating', () => { const g = new SnakeGame(1); g.snake = [{ x: 1, y: 1 }, { x: 1, y: 2 }, { x: 2, y: 2 }, { x: 2, y: 1 }]; g.direction = 'right'; g.food = { x: 9, y: 9 }; g.step(); assert.equal(g.over, false); assert.deepEqual(g.snake[0], { x: 2, y: 1 }); });
+test('food excludes occupied cells and full board has no food', () => { assert.deepEqual(emptyFood([{ x: 0, y: 0 }, { x: 1, y: 0 }, { x: 0, y: 1 }], 2, () => .99), { x: 1, y: 1 }); assert.equal(emptyFood([{ x: 0, y: 0 }], 1, () => 0), null); });
+test('filling final cell wins cleanly and score grows', () => { const g = new SnakeGame(1); const cells = []; for (let y = 0; y < 20; y++)
+    for (let x = 0; x < 20; x++)
+        if (x !== 1 || y !== 0)
+            cells.push({ x, y }); g.snake = cells; g.direction = 'right'; g.food = { x: 1, y: 0 }; g.step(); assert.equal(g.won, true); assert.equal(g.over, true); assert.equal(g.snake.length, 400); assert.equal(g.score, 10); });
+test('wall and self collision end run; speed has cap', () => { const g = new SnakeGame(1); g.snake = [{ x: 19, y: 4 }]; g.step(); assert.equal(g.over, true); g.score = 1e7; assert.equal(g.interval, .07); g.update(10, blank); });
+test('seeded snake worlds have independent deterministic food', () => { const a = new SnakeGame(44), b = new SnakeGame(44); assert.deepEqual(a.food, b.food); a.snake[0]!.x = 0; assert.equal(b.snake[0]!.x, 9); });

@@ -52,6 +52,8 @@ npm run build
 npx playwright install chromium
 npm run test:browser
 npm run test:production
+# With npm run dev still running in another terminal:
+npm run test:gameplay
 ```
 
 Browser tests use installed system Chromium when available at `/usr/bin/chromium`; otherwise they use Playwright's downloaded browser. Set `CHROMIUM_PATH` to override. For optional additional engines, install them with `npx playwright install firefox webkit`, then use `BROWSER_ENGINE=firefox npm run test:browser` or `BROWSER_ENGINE=webkit npm run test:browser` in a POSIX shell; in PowerShell use `$env:BROWSER_ENGINE="firefox"; npm run test:browser`. Linux browser installations may need `npx playwright install-deps` with appropriate system privileges. Network access is needed to download development packages and browser binaries, never to play.

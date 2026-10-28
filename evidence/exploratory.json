@@ -1,5 +1,7 @@
 {
-  "method": "Real Chromium keyboard events drive deterministic 60 Hz session ticks; no world state mutations or teleports. State read only for route planning.",
+  "method": "Real Chromium keyboard events drive deterministic 60 Hz session ticks. requestAnimationFrame is disabled in this test page; the development-only step hook drives the same session update/render path. No world state mutations or teleports. State is read only for route planning. Date.now is fixed before app startup to seed layouts reproducibly.",
+  "browser": "154.0.8037.57",
+  "seed": 424242,
   "games": {
     "maze": {
       "moves": 16,
@@ -13,7 +15,7 @@
       "ghostPositions": [
         {
           "x": 17,
-          "y": 3
+          "y": 11
         },
         {
           "x": 3,
@@ -30,16 +32,16 @@
       "length": 5,
       "over": false,
       "food": {
-        "x": 2,
-        "y": 7
+        "x": 12,
+        "y": 3
       }
     },
     "runner": {
-      "score": 248,
-      "distance": 2483.038888424227,
+      "score": 979,
+      "distance": 9790.581352692032,
       "over": false,
-      "jumps": 2,
-      "groundPassFrames": 38,
+      "jumps": 15,
+      "groundPassFrames": 238,
       "birdPassFrames": 21,
       "ducked": true
     },
@@ -49,9 +51,9 @@
       "over": false,
       "reason": "",
       "hops": 11,
-      "waitFrames": 45,
+      "waitFrames": 241,
       "riverSeen": true,
-      "logCarryPixels": 33.333333333332575,
+      "logCarryPixels": 19.999999999999545,
       "camera": 7
     },
     "breakout": {
@@ -60,9 +62,8 @@
       "over": false,
       "level": 1,
       "remaining": 30,
-      "frames": 1573,
+      "frames": 1652,
       "paddleBounces": 13,
-      "launches": 2,
       "afterIntentionalMiss": {
         "lives": 2,
         "attached": true,
