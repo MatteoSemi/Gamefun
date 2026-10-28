@@ -1,6 +1,6 @@
 # Phosphor Arcade progress
-Milestone: setup underway. Empty repository inspected; no AGENTS.md present.
-Approach: Vite + strict TypeScript, Canvas games behind one shared interface; semantic DOM shell. No runtime dependencies or remote assets.
-Working: project manifest and shared game contract.
-Next: working home menu, independent solo mechanics, then Breakout, shared multiplayer and browser verification.
-Validation: Node 24.19.0 / npm 11.9.0 available.
+Milestone 2: shared session framework + complete Maze Chase solo.
+Working: menu, game launch/control explanation, Maze, countdown, pause, restart, rulebook, versioned records. Shared independent-world session implemented; additional games awaiting integration.
+Validation: strict TypeScript + Vite production build; 31 logic tests passed for prepared modules.
+Next: integrate and checkpoint Snake, Runner, Road, then add Breakout. Browser engines installing.
+Files: src/main.ts shell; src/session.ts coordinator; src/input.ts; src/storage.ts; src/games/maze.ts.
