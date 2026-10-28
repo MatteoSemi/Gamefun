@@ -4,3 +4,13 @@
 - Separate worlds use identical seeds in local multiplayer. Score decides winner; all lives/rounds follow solo rules.
 - Use existing checkout /workspace/Gamefun; no worktree.
 - No application runtime dependencies; Vite/TypeScript and test tooling are development-only.
+- Canvas geometry remains fixed per game (420×460; Road 420×462); CSS scales proportionally and backing stores use up to 3× devicePixelRatio. Multiplayer always has left/right labeled worlds.
+- No audiovisual effects are required for play. No CRT filter, flashing, external fonts or audio is included; the restrained neon/pixel presentation is self-contained.
+- Opening any modal pauses the run. Closing it leaves the run paused; Escape or Resume deliberately continues. Mode selection never replaces a run until Start new run.
+- The five games were integrated and checkpointed in requested order: Maze, Snake, Runner, Road, then Breakout. The shared session supports all modes without game-specific copies.
+- One input service queues chronological key edges, ignores OS repeat, and routes bindings to separate controls. Games own no listeners, timers, audio or animation loops. Returning Home discards their worlds.
+- Maze: connected seeded carved maze with extra loops, BFS pursuit and timed scatter; orange sentry retreats when close. Temporary protection on respawn prevents immediate repeat deaths.
+- Runner: physical jump/duck hitboxes, seeded obstacles with recovery spacing based on current speed; distance-based progression. Road: repeating moving obstacles/logs, safe banks every few rows, no static dead ends, score only highest new row.
+- Breakout uses swept continuous collision queries rather than endpoint checks; simultaneous corner contacts reflect both axes. Round clear resets attached ball and retains remaining lives.
+- Test-only `window.arcade` exposes deterministic stepping in the development build. It is absent from the static production build. Browser gameplay replays seed the clock before initialization, then use actual keyboard events without mutating world state.
+- Only Chromium was available for actual tests here. Browser engines remain optional test targets; do not infer Safari/Edge/Firefox verification from Chromium.

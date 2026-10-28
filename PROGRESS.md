@@ -1,7 +1,11 @@
 # Phosphor Arcade progress
-Milestone 4 complete: multiplayer verified for all five games.
-Working: all five complete solo and independent split-screen worlds; shared countdown/pause and explicit mode replacement; elimination freezes only that player; survivors continue, winners/draw/rematch work.
-Validation: 46/46 logic tests; 17/17 Chromium 154 browser tests; real keyboard gameplay for all five (see evidence/exploratory.json). No uncaught errors in tested flows. Original screenshots in evidence/.
-Checkpoint commits: setup, Maze/framework, Snake, Runner, Road, Breakout; this milestone preserves full browser suite and current evidence.
-Next: finish production static-build offline validation, portable gameplay replay, documentation and final checkpoint.
-Known limitations: Chromium actually tested; Firefox, Safari, Edge and WebKit not tested here. Browser download blocked by network policy. Gameplay has no network dependencies.
+
+Milestone 5 complete: rulebook, records and original visual polish verified.
+
+Working: complete home and five games, each solo/split-screen; consistent SVG house/two-head/book icons; explicit Start mode selector; countdown, pause/resume, blur pause, clean Home exit, restart, game-over/winner/draw/rematch; solo/duo bests; original local art; responsive high DPI Canvas.
+
+Validation: 46/46 logic tests; 17/17 browser tests (Chromium154); deterministic real-keyboard gameplay succeeded in all five; production static-build all10 solo/duo flows with external traffic blocked passed. Screenshots and JSON in evidence/. Gameplay replay is portable tests/gameplay.mjs with a fixed starting seed and no world mutations. Corrected repeated-Escape toggle and production-test child-server cleanup.
+
+Files: README.md exact commands/controls; DECISIONS.md architecture; TEST_REPORT.md actual evidence/limits; src/ implementation; tests/ automation.
+
+Next: final clean npm ci/build/logic check, rerun corrected production cleanup to exit0, save tested environment startup instructions, final evidence/checkpoint commit. No feature work remains. Browser engines other than installed Chromium are untested; no Safari claim.
